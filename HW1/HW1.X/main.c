@@ -54,11 +54,31 @@ int main() {
     DDPCONbits.JTAGEN = 0;
 
     // do your TRIS and LAT commands here
-
+    TRISBbits.TRISB4 = 1; //RB4 set to a digital input for the USER button
+    TRISAbits.TRISA4 = 0; //RA4 set to a digital output for the USER LED
+    
     __builtin_enable_interrupts();
 
-    while(1) {
+    while(1) 
+    {
 	    // use _CP0_SET_COUNT(0) and _CP0_GET_COUNT() to test the PIC timing
 		  // remember the core timer runs at half the sysclk
+       
+        LATAbits.LATA4 = 1; //RA4 high initially means the USER LED starts on
+        
+        _CP0_SET_COUNT(0); //restart timer
+        while(_CP0_SET_COUNT() < 12000)
+            {;} //wait 12000 ticks = 0.5 ms at 24 MHz
+        
+        LATAbits.LATA4 = 0; //RA4 now low turns the USER LED off
+        
+        _CP0_SET_COUNT(0); //restart timer
+        while(_CP0_SET_COUNT() < 12000)
+            {;} //wait 12000 ticks = 0.5 ms at 24 MHz
+        
+        while(PORTBbits.RB4 == 0) //While the user button is pushed
+        {
+            LATAbits.LATA4 = 0; //Turn the USER LED off
+        }
     }
 }
