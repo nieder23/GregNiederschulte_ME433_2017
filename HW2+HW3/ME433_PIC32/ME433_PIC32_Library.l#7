@@ -7848,6 +7848,21 @@ diameter 5 mm, grid 2.54 mm</description>
 <wire x1="1.905" y1="0.635" x2="3.175" y2="0" width="0.127" layer="21"/>
 <wire x1="3.175" y1="0" x2="3.81" y2="0" width="0.127" layer="21"/>
 </package>
+<package name="OSC">
+<wire x1="5.715" y1="1.27" x2="6.35" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="6.35" y1="-0.635" x2="5.715" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="5.715" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="5.715" y1="-1.27" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="6.35" y1="0.635" x2="6.35" y2="-0.635" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="2" x="2.54" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="3" x="5.08" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="-1.27" y="1.397" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
+<text x="-1.27" y="-2.032" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="+3V3">
@@ -7982,6 +7997,17 @@ diameter 5 mm, grid 2.54 mm</description>
 <wire x1="2.54" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
 <text x="-7.62" y="-2.54" size="1.27" layer="94">&gt;NAME</text>
 <text x="-7.62" y="-5.08" size="1.27" layer="94">&gt;VALUE</text>
+</symbol>
+<symbol name="OSC">
+<pin name="1.OSC1" x="-5.08" y="5.08" length="middle"/>
+<pin name="2.GND" x="-5.08" y="0" length="middle"/>
+<pin name="3.OSC2" x="-5.08" y="-5.08" length="middle"/>
+<text x="0" y="10.16" size="1.27" layer="94">&gt;NAME</text>
+<text x="0" y="7.62" size="1.27" layer="94">&gt;VALUE</text>
+<wire x1="-2.54" y1="12.7" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="12.7" x2="-2.54" y2="12.7" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -10810,6 +10836,22 @@ diameter 5 mm, grid 2.54 mm</description>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PB">
+<gates>
+<gate name="G$1" symbol="PB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PB">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
