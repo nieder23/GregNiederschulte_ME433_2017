@@ -12447,7 +12447,6 @@ Source: www.kingbright.com</description>
 <part name="U$8" library="ME433_PIC32_Library" deviceset="PICKIT3" device=""/>
 <part name="+3V9" library="ME433_PIC32_Library" deviceset="+3V3" device=""/>
 <part name="GND19" library="ME433_PIC32_Library" deviceset="GND" device=""/>
-<part name="GND17" library="ME433_PIC32_Library" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12505,7 +12504,6 @@ Source: www.kingbright.com</description>
 <instance part="U$8" gate="G$1" x="-22.86" y="53.34" rot="R180"/>
 <instance part="+3V9" gate="G$1" x="106.68" y="58.42"/>
 <instance part="GND19" gate="1" x="96.52" y="55.88"/>
-<instance part="GND17" gate="1" x="81.28" y="86.36"/>
 </instances>
 <busses>
 </busses>
@@ -12590,10 +12588,6 @@ Source: www.kingbright.com</description>
 <pinref part="J3" gate="G$1" pin="1"/>
 <wire x1="121.92" y1="58.42" x2="96.52" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="GND19" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$3" gate="G$1" pin="1.GND"/>
-<pinref part="GND17" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
