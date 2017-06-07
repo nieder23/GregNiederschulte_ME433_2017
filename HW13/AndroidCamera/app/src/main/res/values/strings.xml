@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AndroidCamera</string>
+    <string name="app_name">Fast and Furious</string>
+    <string name="slider1">Threshold Value</string>
 </resources>

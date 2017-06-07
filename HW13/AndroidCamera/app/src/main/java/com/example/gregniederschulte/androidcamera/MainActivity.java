@@ -1,7 +1,6 @@
 package com.example.gregniederschulte.androidcamera;
 
 // libraries
-
 import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -21,9 +20,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
-
 import java.io.IOException;
-
 import static android.graphics.Color.blue;
 import static android.graphics.Color.green;
 import static android.graphics.Color.red;
@@ -37,9 +34,9 @@ public class MainActivity extends Activity implements TextureView.SurfaceTexture
     private Bitmap bmp = Bitmap.createBitmap(640, 480, Bitmap.Config.ARGB_8888);
     private Canvas canvas = new Canvas(bmp);
     private Paint paint1 = new Paint();
-    private TextView mTextView;
-    SeekBar myControl;
-    TextView myTextView;
+    private TextView mTextView; // variable called mTextView of type TextView (can only receive data in the form of TextView types)
+    SeekBar myControl; // variable called myControl of type SeekBar
+    TextView myTextView; // variable called myTextView of type TextView
 
     static long prevtime = 0; // for FPS calculation
 
@@ -48,8 +45,8 @@ public class MainActivity extends Activity implements TextureView.SurfaceTexture
         setContentView(R.layout.activity_main);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON); // keeps the screen from turning off
 
-        mTextView = (TextView) findViewById(R.id.cameraStatus);
-        myControl = (SeekBar) findViewById(R.id.seek1);
+        mTextView = (TextView) findViewById(R.id.cameraStatus); //Ties together the textview cameraStatus and the variable mTextView
+        myControl = (SeekBar) findViewById(R.id.seek1); //Ties together the seekbar seek1 and the variable myControl
         myControl.setMax(255);
 
         myTextView = (TextView) findViewById(R.id.textView01);
@@ -88,7 +85,8 @@ public class MainActivity extends Activity implements TextureView.SurfaceTexture
         try {
             mCamera.setPreviewTexture(surface);
             mCamera.startPreview();
-        } catch (IOException ioe) {
+        }
+        catch (IOException ioe) {
             // Something bad happened
         }
     }
