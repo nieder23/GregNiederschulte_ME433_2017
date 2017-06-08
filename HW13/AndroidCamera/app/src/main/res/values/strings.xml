@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Fast and Furious</string>
-    <string name="slider1">Threshold Value</string>
+    <string name="framesPerSecond">FPS initial</string>
+    <string name="redSlider">Red Amount: </string>
+    <string name="greenSlider">Green Amount: </string>
+    <string name="blueSlider">Blue Amount: </string>
+    <string name="rowGapSlider"># of rows skipped: </string>
+    <string name="colGapSlider"># of columns skipped: </string>
 </resources>
